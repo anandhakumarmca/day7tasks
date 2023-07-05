@@ -13,7 +13,7 @@
             request.send();
             request.onload = function(){
             var countriesDetails = JSON.parse(request.response);
-            //console.log(countriesDetails); ->> display all results
+            //console.log(countriesDetails); ->> display all countriesDetails
             //display all the countries from Asia continent/region using Filter function
             var country = countriesDetails.filter((element) => element.region === 'Asia');
             console.log("Displaying "+country.length+" Asian Countries Details");
