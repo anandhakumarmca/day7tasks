@@ -18,6 +18,10 @@
             var usDollarCountries = countriesDetails.filter(country => country.currencies && country.currencies.USD);
             console.log("Displaying "+usDollarCountries.length+" using US Dollars");
             console.log(usDollarCountries);
+            //display all the countries common name which uses US Dollars as currency.
+            var countryName = usDollarCountries.map((element) => element.name.common);
+            console.log("Displaying "+countryName.length+" US Dollars currency using Countries");
+            console.log(countryName);
             }
         </script>
     </body>
