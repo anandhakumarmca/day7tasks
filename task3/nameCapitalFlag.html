@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <h1>GUVI_ZEN Day 7 Task 3</h1>
+        <script>
+            var request = new XMLHttpRequest();
+            request.open("GET","https://restcountries.com/v3.1/all");
+            request.send();
+            request.onload = function(){
+            var countriesDetails = JSON.parse(request.response);
+            //console.log(countriesDetails); ->> display all countriesDetails
+            console.log("Displaying "+ countriesDetails.length +" Countries Details");
+            //display name, capital, flag using forEach function
+            countriesDetails.forEach(element => {
+            console.log("Name: "+element.name.common);
+            console.log("Capital: "+element.capital);
+            console.log("Flag: "+ element.flag);
+            });
+            }
+        </script>
+    </body>
+</html>
